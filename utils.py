@@ -1,3 +1,6 @@
+import threading
+import signal
+
 class PeriodicEvent(object):
     def __init__(self, interval, func):
         self.interval = interval
