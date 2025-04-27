@@ -15,7 +15,7 @@ config = {
     "0Fh": lambda t: min(80, max(5, 5 if t < 30 else 0.019753*t**2 - 1.1852*t + 17.778))
 }
 
-print(f"Config initialized for sensors {config.keys().join(", ")}")
+print(f"Config initialized for sensors {config.keys().join(', ')}")
 
 def fan_update():
     result = subprocess.run(["ipmitool", "sdr", "type", "temperature"], capture_output=True, text=True).stdout
